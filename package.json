@@ -17,7 +17,9 @@
   ],
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
+    "start": "npm-run-all --parallel api serve",
+    "api": "node api.js",
+    "serve": "ng serve --proxy-config proxy.config.json",
     "build": "ng build",
     "lint": "ng lint --fix",
     "build:client-and-server-bundles": "ng build --prod && ng build --prod --app 1 --output-hashing=false",
@@ -59,6 +61,7 @@
     "cpy-cli": "^1.0.1",
     "express": "^4.15.2",
     "http-server": "^0.10.0",
+    "npm-run-all": "^4.1.2",
     "pre-commit": "^1.2.2",
     "reflect-metadata": "^0.1.10",
     "ts-loader": "^2.3.7",

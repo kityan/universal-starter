@@ -7,6 +7,7 @@ import {Component} from '@angular/core';
   <a routerLink="/">Home</a>
   <a routerLink="/lazy">Lazy</a>
   <a routerLink="/lazy/nested">Lazy_Nested</a>
+  <a routerLink="/list">List</a>
   <router-outlet></router-outlet>
   `,
   styles: []
